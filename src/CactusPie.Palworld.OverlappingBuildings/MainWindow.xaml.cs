@@ -40,7 +40,7 @@ namespace CactusPie.Palworld.OverlappingBuildings
         private static async Task<long?> GetAddressForForbiddenOverlapping()
         {
             IEnumerable<long>? addresses = await GameMemory
-                .AoBScan("74 07 B0 14 E9 3C 01 00 00", true, true)
+                .AoBScan("74 07 B0 14 E9 2F 01 00 00", true, true)
                 .ConfigureAwait(false);
 
             long? address = addresses?.FirstOrDefault();
@@ -50,7 +50,7 @@ namespace CactusPie.Palworld.OverlappingBuildings
         private static async Task<long?> GetAddressForAllowedOverlapping()
         {
             IEnumerable<long>? addresses = await GameMemory
-                .AoBScan("EB 07 B0 14 E9 3C 01 00 00", true, true)
+                .AoBScan("EB 07 B0 14 E9 2F 01 00 00", true, true)
                 .ConfigureAwait(false);
 
             long? address = addresses?.FirstOrDefault();
